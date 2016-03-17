@@ -40,7 +40,7 @@
 			navigator.geolocation.getCurrentPosition(function(position){
 				$.ajax({
 					type: 'GET',
-					url: "/api/setLocationInfoAjax.nhn?lat="+position.coords.latitude+"&lng="+position.coords.longitude,
+					url: "http://m.map.naver.com/setLocationInfoAjax.nhn?lat="+position.coords.latitude+"&lng="+position.coords.longitude,
 					cache: false,
 					success: function(data, status, xhr) {
 						var location = JSON.stringify(JSON.parse(data).result.location.currentLocation);
